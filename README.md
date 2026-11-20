@@ -28,7 +28,7 @@ ms-web/
 ├── sitemap.xml                 ← sitemap (update domain after purchase)
 ├── site.webmanifest            ← PWA/branding metadata
 ├── assets/
-│   ├── css/style.css           ← design system + all styles (dark colorful default, light editorial alt)
+│   ├── css/style.css           ← design system + all styles (light ivory creative default, dark alt)
 │   ├── js/site-config.js       ← YOUR editable settings (email, links, form, analytics)
 │   ├── js/main.js              ← theme, nav, scroll animations, progress bar, form logic
 │   └── img/
@@ -109,7 +109,7 @@ That's it — submissions POST to Formspree and arrive in your inbox. Until it i
 - Hero image is local, preloaded; everything below the fold lazy-loads.
 - `prefers-reduced-motion` disables all animation for users who opt out.
 - Semantic landmarks, correct heading hierarchy, labelled alt text, visible focus rings, skip-link, keyboard-operable menu, ARIA live regions on form feedback.
-- Dark colorful theme by default (deep navy base, violet → cyan → amber accents); light ivory editorial theme via the toggle. Accessible-contrast palette on both.
+- Light ivory "creative studio" theme by default (porcelain-white base, aqua → violet → magenta accents with citrus-yellow highlights, subtle gradient-mesh / dotted-grid / grain backgrounds); complementary ink-dark theme via the toggle. Accessible-contrast palette on both.
 
 ---
 
