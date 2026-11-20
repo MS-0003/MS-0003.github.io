@@ -1,0 +1,17 @@
+{
+  "name": "Muskan Sailth — Portfolio",
+  "short_name": "Muskan Sailth",
+  "description": "Portfolio of Muskan Sailth, Operations Manager at 30Days Technologies Pvt. Ltd.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0B0D13",
+  "theme_color": "#0B0D13",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# robots.txt — Muskan Sailth Portfolio
+# Live deployment: muskansailth.netlify.app
+# If you later buy a custom domain, update this file and sitemap.xml together.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://muskansailth.netlify.app/sitemap.xml
