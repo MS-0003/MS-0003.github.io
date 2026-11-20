@@ -68,7 +68,7 @@ Nothing fake is published anywhere: no phone number, date of birth or home addre
 
 ## 5. Live URL & connecting a custom domain (when purchased)
 
-The site is currently deployed at **https://muskansailth.netlify.app/** — `SITE_URL` in `site-config.js`, the canonical tag and `og:url` in `index.html`, plus `sitemap.xml` and `robots.txt` are all set to this address.
+The site is currently deployed at **https://ms-0003.github.io/** (GitHub Pages, from the `MS-0003.github.io` repository) — `SITE_URL` in `site-config.js`, the canonical tag and `og:url` in `index.html`, plus `sitemap.xml` and `robots.txt` are all set to this address.
 
 When you buy your own domain later, update all five places together:
 
@@ -76,7 +76,7 @@ When you buy your own domain later, update all five places together:
 2. `index.html` → the `<link rel="canonical" ...>` tag, `<meta property="og:url" ...>` **and** the `og:image` / `twitter:image` URLs
 3. `sitemap.xml` → `<loc>`
 4. `robots.txt` → the `Sitemap:` line
-5. Update the Netlify site with the new files.
+5. Re-upload the updated files to the GitHub repository (Settings → Pages redeploys automatically).
 
 Then point the domain's DNS at the host, enable HTTPS, and redirect `http://` and the apex domain to `https://www.` (or whichever you choose) so there is exactly **one** canonical address.
 
