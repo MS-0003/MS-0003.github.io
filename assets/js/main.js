@@ -77,9 +77,9 @@
   /* ---------- Theme ---------- */
   function initTheme() {
     const stored = localStorage.getItem("ms-theme");
-    // Dark colorful theme is the designed default; the toggle offers the
-    // light editorial alternative. (prefers-color-scheme no longer overrides it.)
-    const theme = stored || "dark";
+    // Light ivory creative theme is the designed default; the toggle offers the
+    // complementary dark alternative. (prefers-color-scheme no longer overrides it.)
+    const theme = stored || "light";
     document.documentElement.setAttribute("data-theme", theme);
 
     const toggle = $("#themeToggle");
@@ -205,16 +205,23 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
     items.forEach((el) => io.observe(el));
 
-    // Safety net: reveal anything already inside the viewport on load,
-    // so first-screen content never depends on observer timing.
-    window.addEventListener("load", () => {
+    // Safety net: reveal anything at or above the 94%-viewport line on load and
+    // on every scroll — first-screen content (and anything a throttled observer
+    // might starve) never stays invisible. Revealed items drop out of the list,
+    // so this costs nothing once the page has been seen.
+    const sweep = () => {
       const vh = window.innerHeight;
-      items.forEach((el) => {
-        if (el.classList.contains("is-visible")) return;
-        const r = el.getBoundingClientRect();
-        if (r.top < vh * 0.94 && r.bottom > 0) el.classList.add("is-visible");
-      });
-    });
+      for (let i = items.length - 1; i >= 0; i--) {
+        const r = items[i].getBoundingClientRect();
+        if (r.top < vh * 0.94) {
+          items[i].classList.add("is-visible");
+          items.splice(i, 1);
+        }
+      }
+    };
+    window.addEventListener("load", sweep);
+    window.addEventListener("scroll", sweep, { passive: true });
+    sweep();
   }
 
   /* ---------- Contact form ---------- */
