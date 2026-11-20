@@ -1,0 +1,8 @@
+# robots.txt — Muskan Sailth Portfolio
+# Live deployment: ms-0003.github.io (GitHub Pages)
+# If you later buy a custom domain, update this file and sitemap.xml together.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ms-0003.github.io/sitemap.xml
