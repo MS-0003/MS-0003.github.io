@@ -473,7 +473,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   50% { box-shadow: 0 0 0 6px rgba(6, 182, 212, 0); }
 }
 
+/* H1 wraps the name + designation for SEO; visuals stay identical */
+.hero__title {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.75;
+  letter-spacing: normal;
+}
 .hero__name {
+  display: block;
   font-size: clamp(3rem, 6.6vw, 5rem);
   font-weight: 800;
   letter-spacing: -.03em;
